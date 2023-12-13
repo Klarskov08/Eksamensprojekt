@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Procesport.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            font-family: 'Arial, Helvetica, sans-serif';
+            background-color: #f2f2f2;
+            width: 100%;
+            min-height: 100vh;
+            margin: 0;
+            padding-top: 80px;
+        }
+
+        .contact-container {
+            width: 80%;
+            margin: 100px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-container h1 {
+            color: #333;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+        }
+
+        label {
+            font-size: 18px;
+            color: #333;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+    <title>Contact Me</title>
+</head>
+<body>
+    
+    <header class="header">
+        
+        <a href="procesport.html">
+        <img src="Logo.png" class="logo">
+        </a>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="ikoner">
+            <i class='bx bx-menu' id="menu-ikon"></i>
+            <i class='bx bx-x' id="lukke-ikon"></i>
+        </label>
+
+        <nav class="navbar">
+            <a href="procesport.html" style="--i:0;">FRONT PAGE</a>
+            <a href="procesport.html#about-me" style="--i:1;">ABOUT ME</a>
+            <a href="portfolio.html" style="--i:2;">PORTFOLIO</a>
+            <a href="contact.html" style="--i:3;">CONTACT</a>
+        </nav>
+    </header>
+
+    <div class="contact-container">
+        <h1>Contact Me</h1>
+        <p>Feel free to reach out!</p>
+
+        <div class="contact-details">
+            <p><strong>Name:</strong> Mikkel Klarskov Thomsen</p>
+            <p><strong>Age:</strong> 23</p>
+            <p><strong>Lives in:</strong> Odense, Denmark</p>
+            <p><strong>Email:</strong> Mikkel.klarskov@gmail.com</p>
+        </div>
+
+        <form>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name">
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email">
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Your Message"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <p>I hope you're interested in working with me! Let's create something amazing together.</p>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Klarskovmm.dk All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/mikkel.klarskovthomsen/" class="icon"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/klarskovsportgraphics/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" class="icon"><i class='bx bxl-instagram'></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,3 +1,15 @@
+meta {
+    viewport-fit: width=device-width, initial-scale=1.0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -25,7 +37,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1.3rem 10%;
+    padding: 0.002rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,7 +62,7 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0), #f3c6414b, rgba(0, 0, 0, 0));
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0), #f3c64131, rgba(0, 0, 0, 0));
     transition: 5s;
 }
 
@@ -59,9 +71,7 @@ body {
 }
 
 .logo {
-    position: fixed;
     height: 75px;
-    left: 0px;
     width: 75px;
 }
 
@@ -129,7 +139,7 @@ body {
 
     .navbar a {
         display: block;
-        font-size: 1.1rem;
+        font-size: 2rem;
         margin: 1.5rem 0;
         text-align: center;
         transform: translateY(-50px);
@@ -143,6 +153,43 @@ body {
     }
 }
 
+.teksttop {
+    text-align: center;
+    padding: 7rem;
+}
+
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.2s linear;
+    
+}
+
+.container {
+    padding: 10px;
+}
+
+.container .billeder {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    justify-content: space-around;
+
+}
+
+.container .billeder img {
+    width: 450px;
+    height: auto;
+    margin-top: 25%;
+    margin-bottom: 5%;
+    border-radius: 0.2rem;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.341);
+}
+
+.container .billeder img:hover{
+    transform: scale(1.01);
+}
 * {
     margin: 0;
     padding: 0;
@@ -153,17 +200,51 @@ body {
     margin-top: 80x;
 }
 
+@media (max-width: 768px) {
+    .banner {
+        width: 100% !important;
+        background-position: center !important;
+        margin: 80px 0 0 !important;
+        height: 50vh;
+        padding-top: 40%;
+    }
+
+    .banner-text {
+        padding-top: 85px !important;
+        margin-left: 25px !important;
+    }
+
+    .banner-text h2 {
+        font-size: 70px !important;
+    }
+
+    .banner-text h1 {
+        font-size: 20px !important;
+    }
+
+    #knap {
+        margin-left: 150px !important;
+    }
+
+    .teksttop {
+        margin-top: -15%;
+        font-size: 60%;
+    }
+}
+    
+
 .banner {
-    width: 100%;
+    width: 100vw;
     height: 65vh;
-    background-image: url('backgrund.png');
+    background-image: url('backgrund.jpg');
     background-size: cover;
     background-position: 90%;
     border-radius: 0%;
     position: relative; 
-    margin-top: 60px;
+    margin-top: -1px;
     margin-bottom: -20px;
     margin-right: 50px;
+    
 }
 
 .banner-text {
@@ -173,7 +254,7 @@ body {
 
 .banner-text h2 {
     letter-spacing: 10px;
-    font-size: 100px;
+    font-size: 7vw;
     font-family: 'Bungee Outline';
     font-style: italic;
     color: #fff;
@@ -181,8 +262,8 @@ body {
 }
 
 .banner-text h1 {
-    margin-left: 9%;
-    font-size: 35px;
+    margin-left: 4%;
+    font-size: 2.5vw;
     font-family: 'Bebas Neue';
     color: white;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.739);
@@ -216,7 +297,6 @@ h2 {
     font-size: 28px;
     font-weight: 500;
     font-family: 'Bebas Neue';
-    
 }
 
 p {
@@ -232,7 +312,7 @@ p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     color: #000000;
-    font-weight: 500px;
+    font-weight: 500;
     letter-spacing: 1.5px;
 }
 
@@ -243,7 +323,45 @@ p {
     height: auto;
     margin: right;
     float: right;
-    margin-top: -25vh;
+    margin-top: -14.6vh;
+}
+
+.underskrift {
+    font-family: 'League Script';
+    font-size: 25px;
+    text-align: left;
+    padding: 50px;
+    
+}
+
+/* Media query for screens up to 768 pixels */
+@media (max-width: 768px) {
+    .mig {
+        padding: 10% 2rem;
+        margin-top: 0;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .liste {
+        font-size: 16px;
+    }
+
+    .traine {
+        margin-top: 0%;
+    }
+
+    .underskrift {
+        text-align: left;
+        font-size: 25px;
+        margin-top: 90px;
+    }
 }
 
 /* Footer */
@@ -253,9 +371,7 @@ p {
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    float: inline-end;
     width: 100%;
-    height: auto;
 }
 
 .footer-content {
@@ -280,3 +396,117 @@ p {
     text-decoration: none;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 80px;
+}
+
+.wrapper {
+    width: 80%;
+    padding: 30px 0;
+    text-align: center;
+    margin: 0 auto; /* Center the wrapper */
+}
+
+.section-header {
+    text-transform: uppercase;
+    padding-bottom: 30px;
+    font-size: 55px;
+    color: #000000;
+    letter-spacing: 3px;
+}
+
+.content1 p {
+    line-height: 1.5;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.box {
+    flex: 1 0 calc(33.333% - 15px);
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 15px;
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+    height: 400px;
+    overflow: hidden;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.box:hover::before {
+    top: 0;
+    right: calc(100% - 5%);
+    z-index: 8;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box .img-text {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.box:hover .img-text {
+    top: 0;
+    right: 0;
+}
+
+.para{
+    padding-left: 20%;
+}
+
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: 10px; 
+    }
+
+    .box {
+        flex: 1 0 calc(50% - 10px);
+        margin-bottom: 10px;
+    }
+
+    .para {
+        padding-left: 50px;
+    }
+}
